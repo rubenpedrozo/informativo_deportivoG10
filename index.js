@@ -6,7 +6,7 @@ app.use(cors())
 app.use(express.json())
 
 app.get('/',(req,res)=>{
-    res.send('😍 Hola Beatifull Family los amo 😘')
+    res.send('😍 Saludos desde BECERRIL😘')
 })
 
 app.listen(8000,()=>{
