@@ -25,5 +25,3 @@ const eventosShema = new mongoose.Schema({
 });
 
 export default mongoose.model("ceventos",eventosShema);
-//const mevento = mongoose.model
-//export default mevento;

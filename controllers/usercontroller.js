@@ -8,3 +8,17 @@ export const regusuario = (req, res) => {
         .then((data)=>res.json(data))
         .catch((error)=> res.json({message: error}));
 };
+export const regusuario1 = async (req,res) => {
+    res.send("Archivo agregado con exito")
+    console.log(req.body)
+    await usuario.create({nameuser: req.body.nameuser, password: req.body.password, correo:req.body.correo});
+}
+
+//Mostrar Usuarios
+export const shuser = (req,res) => {
+
+    usuario
+    .find()
+    .then((data)=> res.json(data))
+    .catch((error)=> res.json({message:error}));
+}
