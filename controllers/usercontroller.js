@@ -15,10 +15,29 @@ export const regusuario1 = async (req,res) => {
 }
 
 //Mostrar Usuarios
-export const shuser = (req,res) => {
+export const showuser = (req,res) => {
 
     usuario
     .find()
     .then((data)=> res.json(data))
     .catch((error)=> res.json({message:error}));
 }
+
+//Mostrar un Usuario
+export const showoneuser = (req,res) => {
+    const { id } = req.params;
+    usuario
+    .findById(id)
+    .then((data) => res.json(data))
+    .catch((error) => res.json({ message: error }));
+};
+
+//Actualizar Usuario
+export const updateoneuser = (req, res) => {
+    const { id } = req.params;
+    const { nameuser, password, correo } = req.body;
+    usuario
+    .updateone({ _id: id }, {$set: {nameuser, password, correo } })
+    .then((data) => res.json(data))
+    .catch((error) => res.json({ message: error }));
+};
