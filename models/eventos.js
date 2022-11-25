@@ -24,4 +24,6 @@ const eventosShema = new mongoose.Schema({
     }
 });
 
-export default mongoose.model("ceventos",eventosShema);
+export const evento = mongoose.model('ceventos', eventosShema)
+export default evento;
+//export default mongoose.model("ceventos",eventosShema);

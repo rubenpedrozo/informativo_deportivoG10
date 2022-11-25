@@ -32,12 +32,22 @@ export const showoneuser = (req,res) => {
     .catch((error) => res.json({ message: error }));
 };
 
+//Eliminar usuario
+export const deluser = (req, res) => {
+    const { id } = req.params;
+    usuario
+    .deleteOne({ _id: id})
+    .then((data) => res.json(data))
+    .catch((error) => res.json({ message: error}));
+};
+
+
 //Actualizar Usuario
-export const updateoneuser = (req, res) => {
+export const upuser = (req, res) => {
     const { id } = req.params;
     const { nameuser, password, correo } = req.body;
     usuario
-    .updateone({ _id: id }, {$set: {nameuser, password, correo } })
+    .updateOne({ _id: id }, { $set: {nameuser, password, correo } })
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 };
