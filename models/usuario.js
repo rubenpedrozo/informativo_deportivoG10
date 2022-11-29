@@ -18,9 +18,11 @@ const userShema = new mongoose.Schema (
         }
     },
     {
-        timestamps: true,
-        versionKey: false,
+         timestamps: true,
+            versionKey: false,
     }
-);
+    );
+    
+
 export const usuario = mongoose.model('user', userShema);
 export default usuario;
