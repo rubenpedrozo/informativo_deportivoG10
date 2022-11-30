@@ -19,7 +19,6 @@ router.get('/showuser', showuser); //Mostrar Usuarios
 router.get('/showuser/:id', showoneuser); //Mostrar un Usuario
 router.delete('/deluser/:id', deluser); //Eliminar Usuario
 router.put('/upuser/:id', upuser); //Actualizar Usuario
-//router.put('/upuser/:id', upuser); 
 
 
 export default router;
