@@ -17,7 +17,7 @@ router.put('/upevento/:id', upevento); // Actualizar evento
 router.post('/reguser', regusuario); //Registrar Usuario
 router.get('/showuser', showuser); //Mostrar Usuarios
 router.get('/showuser/:id', showoneuser); //Mostrar un Usuario
-router.delete('/deluser/:id', deluser); //Eliminar Usuario
+router.delete('/showuser/:id', deluser); //Eliminar Usuario
 router.put('/upuser/:id', upuser); //Actualizar Usuario
 
 
